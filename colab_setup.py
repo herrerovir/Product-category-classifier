@@ -1,26 +1,52 @@
-# notebooks/colab_setup.py
-from google.colab import drive
+from pathlib import Path
 import os
 
-def setup(project_root = "Colab_Projects/your-repo", subdir=""):
-    """
-    Mounts Google Drive and sets the working directory.
-    
-    Parameters:
-    - project_root: path under 'MyDrive' to your project root
-    - subdir: optional subfolder inside your repo to cd into
-    """
-    # Mount Google Drive if not already mounted
-    if not os.path.ismount("/content/drive"):
-        drive.mount("/content/drive")
+# === Project Root ===
+ROOT_DIR = Path(__file__).resolve().parent
 
-    base_path = os.path.join("/content/drive/MyDrive", project_root)
+# === Data Directories ===
+DATA_DIR = ROOT_DIR / "data"
+RAW_DIR = DATA_DIR / "raw"
+PROCESSED_DIR = DATA_DIR / "processed"
+
+# === Figures Directory ===
+FIGURES_DIR = ROOT_DIR / "figures"
+
+# === Model Directory ===
+MODELS_DIR = ROOT_DIR / "models"
+
+# === Notebooks Directory ===
+NOTEBOOKS_DIR = ROOT_DIR / "notebooks"
+
+# === Results Directories ===
+RESULTS_DIR = ROOT_DIR / "results"
+METRICS_RESULTS_DIR = RESULTS_DIR / "metrics"
+PREDICTIONS_DIR = RESULTS_DIR / "predictions"
+
+# === Ensure all required directories exist ===
+for path in [
+    RAW_DIR,
+    PROCESSED_DIR,
+    FIGURES_DIR,
+    MODELS_DIR,
+    NOTEBOOKS_DIR,
+    RESULTS_DIR,
+    METRICS_RESULTS_DIR,
+    PREDICTIONS_DIR,
+]:
+    path.mkdir(parents=True, exist_ok=True)
+
+# === Set working directory ===
+def setup(subdir = None):
+    """
+    Sets the working directory in Colab after Drive is mounted.
     
+    Args:
+    ----------
+        subdir (str, optional): Subdirectory within the repo to `cd` into (e.g., 'notebooks')
+    """
     if subdir:
-        full_path = os.path.join(base_path, subdir)
+        os.chdir(ROOT_DIR / subdir)
     else:
-        full_path = base_path
-
-    os.chdir(full_path)
-    print("Drive mounted and working directory set to:\n", os.getcwd())
-
+        os.chdir(ROOT_DIR)
+    print(f"Working directory set to: {os.getcwd()}")
