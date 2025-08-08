@@ -1,0 +1,166 @@
+----------------------------------------
+Input Text: Samsung Galaxy Tab S9 Ultra with 14.6'' AMOLED Display and S Pen
+
+Top Prediction: Electronics (Confidence: 0.9988)
+
+All Predictions:
+
+  Electronics: 0.9988
+  Books: 0.0006
+  Household: 0.0006
+  Clothing & Accessories: 0.0001
+----------------------------------------
+Input Text: Bose QuietComfort Ultra Earbuds – Noise Cancelling, Bluetooth
+
+Top Prediction: Electronics (Confidence: 0.9988)
+
+All Predictions:
+
+  Electronics: 0.9988
+  Books: 0.0007
+  Household: 0.0004
+  Clothing & Accessories: 0.0001
+----------------------------------------
+Input Text: ASUS ROG Zephyrus Gaming Laptop – Ryzen 9, RTX 4070, 1TB SSD
+
+Top Prediction: Electronics (Confidence: 0.9990)
+
+All Predictions:
+
+  Electronics: 0.9990
+  Books: 0.0006
+  Household: 0.0003
+  Clothing & Accessories: 0.0001
+----------------------------------------
+Input Text: iRobot Roomba i7+ Robot Vacuum with Automatic Dirt Disposal
+
+Top Prediction: Household (Confidence: 0.9996)
+
+All Predictions:
+
+  Household: 0.9996
+  Electronics: 0.0002
+  Books: 0.0002
+  Clothing & Accessories: 0.0000
+----------------------------------------
+Input Text: Keurig K-Elite Single Serve Coffee Maker – Iced Coffee Option
+
+Top Prediction: Household (Confidence: 0.9995)
+
+All Predictions:
+
+  Household: 0.9995
+  Electronics: 0.0003
+  Books: 0.0001
+  Clothing & Accessories: 0.0000
+----------------------------------------
+Input Text: Dyson Pure Cool Link Air Purifier and Fan – WiFi Enabled, HEPA Filter
+
+Top Prediction: Household (Confidence: 0.9996)
+
+All Predictions:
+
+  Household: 0.9996
+  Books: 0.0002
+  Electronics: 0.0002
+  Clothing & Accessories: 0.0001
+----------------------------------------
+Input Text: Atomic Habits by James Clear – Build Good Habits & Break Bad Ones
+
+Top Prediction: Books (Confidence: 0.9999)
+
+All Predictions:
+
+  Books: 0.9999
+  Electronics: 0.0001
+  Household: 0.0000
+  Clothing & Accessories: 0.0000
+----------------------------------------
+Input Text: The Hobbit by J.R.R. Tolkien – Illustrated Collector’s Edition
+
+Top Prediction: Books (Confidence: 0.9998)
+
+All Predictions:
+
+  Books: 0.9998
+  Household: 0.0001
+  Electronics: 0.0001
+  Clothing & Accessories: 0.0000
+----------------------------------------
+Input Text: Introduction to Machine Learning with Python by Andreas C. Müller
+
+Top Prediction: Books (Confidence: 0.9999)
+
+All Predictions:
+
+  Books: 0.9999
+  Electronics: 0.0001
+  Household: 0.0000
+  Clothing & Accessories: 0.0000
+----------------------------------------
+Input Text: Levi’s Men's 511 Slim Fit Jeans – Stretch Denim, Dark Indigo
+
+Top Prediction: Clothing & Accessories (Confidence: 0.9996)
+
+All Predictions:
+
+  Clothing & Accessories: 0.9996
+  Household: 0.0002
+  Books: 0.0001
+  Electronics: 0.0000
+----------------------------------------
+Input Text: Nike Women's Dri-FIT Training T-Shirt – Lightweight & Breathable
+
+Top Prediction: Clothing & Accessories (Confidence: 0.9992)
+
+All Predictions:
+
+  Clothing & Accessories: 0.9992
+  Books: 0.0005
+  Household: 0.0003
+  Electronics: 0.0000
+----------------------------------------
+Input Text: The North Face Men's Thermoball Eco Jacket – Insulated, Packable
+
+Top Prediction: Clothing & Accessories (Confidence: 0.9997)
+
+All Predictions:
+
+  Clothing & Accessories: 0.9997
+  Books: 0.0002
+  Household: 0.0001
+  Electronics: 0.0000
+----------------------------------------
+Input Text: Ray-Ban RB2132 New Wayfarer Sunglasses – Polarized, Classic Black
+
+Top Prediction: Clothing & Accessories (Confidence: 0.9996)
+
+All Predictions:
+
+  Clothing & Accessories: 0.9996
+  Books: 0.0002
+  Household: 0.0002
+  Electronics: 0.0000
+----------------------------------------
+Input Text: Fossil Women's Leather Wallet with RFID Blocking – Zipper Closure
+
+Top Prediction: Household (Confidence: 0.9967)
+
+All Predictions:
+
+  Household: 0.9967
+  Books: 0.0018
+  Clothing & Accessories: 0.0011
+  Electronics: 0.0004
+----------------------------------------
+Input Text: Casio G-Shock Men's Sport Watch – Shock Resistant, Waterproof
+
+Top Prediction: Clothing & Accessories (Confidence: 0.9964)
+
+All Predictions:
+
+  Clothing & Accessories: 0.9964
+  Electronics: 0.0021
+  Books: 0.0011
+  Household: 0.0004
+----------------------------------------
