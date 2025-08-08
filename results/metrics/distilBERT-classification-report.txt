@@ -1,0 +1,12 @@
+DistilBERT Model Classification Report:
+
+                        precision    recall  f1-score   support
+
+           Electronics       0.94      0.95      0.94       531
+             Household       0.97      0.96      0.97      1057
+                 Books       0.97      0.96      0.97       626
+Clothing & Accessories       0.98      0.99      0.98       567
+
+              accuracy                           0.97      2781
+             macro avg       0.96      0.97      0.96      2781
+          weighted avg       0.97      0.97      0.97      2781

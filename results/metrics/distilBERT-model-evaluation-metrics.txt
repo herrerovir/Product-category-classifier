@@ -1,0 +1,11 @@
+DistilBERT Model Evaluation Metrics on Test Set:
+
+Eval_loss: 0.2059
+Eval_accuracy: 0.9651
+Eval_precision: 0.9652
+Eval_recall: 0.9651
+Eval_f1: 0.9651
+Eval_runtime: 9.6447
+Eval_samples_per_second: 288.3460
+Eval_steps_per_second: 18.0410
+Epoch: 5.0000
