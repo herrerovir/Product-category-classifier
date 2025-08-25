@@ -1,6 +1,11 @@
 # 🛍️ Product Category Classification with DistilBERT
+[![HF Space](https://img.shields.io/badge/🤗%20HuggingFace-Space-blueviolet)](https://huggingface.co/spaces/herrerovir/product-category-classifier-model)
 
-This project uses a pre-trained transformer model, DistilBERT, to build a product category classifier for e-commerce data. The model is fine-tuned on a labeled dataset of product descriptions to learn how to assign each item to one of four categories.  The entire workflow was developed and executed in Google Colab to take advantage of free GPU resources. A Tesla T4 GPU was used to speed up training and evaluation. The workflow covers everything from data preparation and model training to evaluation and real-world inference. The goal is to create a fast and reliable solution that can be used to automate product tagging in online retail systems.
+This project implements a full-stack solution for product category classification covering data collection, preprocessing, modeling, evaluation, inference, and deployment. For local deployment, **Streamlit** is used for the frontend interface while **FastAPI** handles model inference. Since Hugging Face Spaces do not support running FastAPI alongside Streamlit, the deployment there combines the inference logic within Streamlit itself, supported by a backend script that loads the model and performs predictions. This setup allows for smooth cloud deployment with an interactive user interface, while keeping the local deployment organized and efficient.
+
+The core of the project uses a pre-trained transformer model, **DistilBERT**, fine-tuned on a labeled dataset of product descriptions to assign each item to one of four categories. The entire workflow was developed and executed in Google Colab to take advantage of free GPU resources. A Tesla T4 GPU was used to speed up training and evaluation. The workflow covers everything from data preparation and model training to evaluation and real-world inference. The goal is to create a fast and reliable solution that can be used to automate product tagging in online retail systems.
+
+👉 **[Try the live demo](https://huggingface.co/spaces/herrerovir/product-category-classifier)**
 
 ## 🗃️ Repository Structure
 
@@ -47,7 +52,7 @@ Product-category-classifier/
 
 - **Evaluation Metrics** – Used accuracy, precision, recall, and F1 score to monitor performance, achieving around 96.5% across metrics.
 
-- **Inference Pipeline** – Created a pipeline for real-time product category predictions with confidence scores.
+- **Inference Pipeline** – Created a pipeline for real-time product category predictions with confidence scores. A Streamlit-based web interface is also provided for real-time inference, available both locally and via a live Hugging Face Space
 
 - **Conclusion** – Delivered an accurate, efficient model ready for automating product categorization in e-commerce applications.
 
@@ -120,6 +125,9 @@ The trained model files are **not included** in this repository due to their lar
 
 When you run the notebook in Colab, your trained model will be saved to the corresponding folder in your Drive, making it easy to load for inference or further training without needing to download from this repo.
 
+Additionally, the fine-tuned model is **publicly hosted and available for download** at the Hugging Face Model Hub:
+👉 [https://huggingface.co/herrerovir/product-category-classifier-model](https://huggingface.co/herrerovir/product-category-classifier-model)
+
 ## 📊 Model Performance
 
 The model delivers consistently strong results across all key metrics, generalizes effectively on new data, and produces confident, reliable predictions.
@@ -147,6 +155,49 @@ These results highlight the model’s ability to accurately understand diverse p
 ## 📈 Results
 
 The fine-tuned DistilBERT model achieved strong performance with over 96% accuracy, precision, recall, and F1 score on the test set. It reliably categorizes product descriptions across Electronics, Household, Books, and Clothing & Accessories. During inference, the model outputs highly confident predictions, making it well-suited for practical e-commerce applications.
+
+## 🌐 Deployment Options
+
+You can interact with the product category classifier via a **web interface** using either local deployment or a cloud-hosted app on Hugging Face Spaces.
+
+### Option 1: Run Locally with Streamlit
+
+If you prefer running the classifier in your own environment with an interactive UI:
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/herrerovir/Product-category-classifier
+   cd Product-category-classifier
+   ```
+
+2. Install the dependencies (if not already done):
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Launch the Streamlit app:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+4. Open your browser and go to:
+
+   ```
+   http://localhost:8501
+   ```
+
+This will open a user-friendly web app where you can input product descriptions and get predicted categories with confidence scores.
+
+### Option 2: Try It on Hugging Face Spaces (No Setup Required)
+
+You can also test the model live in your browser via the Hugging Face Space:
+
+👉 **[Try the Live Demo on Hugging Face Spaces](https://huggingface.co/spaces/herrerovir/product-category-classifier)**
+
+No installation or GPU required — just open the link and start classifying product descriptions instantly.
 
 ## 🙌 Acknowledgments
 
