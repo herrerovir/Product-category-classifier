@@ -56,6 +56,24 @@ Product-category-classifier/
 
 - **Conclusion** – Delivered an accurate, efficient model ready for automating product categorization in e-commerce applications.
 
+## 📊 Dataset
+
+This project uses the publicly available **E-Commerce Text Classification Dataset**, hosted on Zenodo. It contains product descriptions labeled into four high-level e-commerce categories:
+
+- **Electronics**
+- **Books**
+- **Clothing & Accessories**
+- **Household**
+
+**Datasest Info**
+
+- **Title**: *E-Commerce Text Dataset*
+- **Hosted on**: [Zenodo](https://zenodo.org/records/3355823)
+- **Total Records**: 50,424 product entries
+- **Columns Used**:
+  - `description`: natural language description of a product
+  - `category`: one of the four target classes
+
 ## ⚙️ Dependencies
 
 This project requires the following Python libraries:
@@ -68,8 +86,8 @@ pip install -r requirements.txt
 - **Hugging Face Transformers**
 - **Hugging Face Datasets**
 - **Scikit-learn**
-- **Pandas**
-- **Numpy**
+- **Streamlit**
+- **FastAPI**
 
 ## ▶️ How to Run the Project
 
@@ -126,7 +144,7 @@ The trained model files are **not included** in this repository due to their lar
 When you run the notebook in Colab, your trained model will be saved to the corresponding folder in your Drive, making it easy to load for inference or further training without needing to download from this repo.
 
 Additionally, the fine-tuned model is **publicly hosted and available for download** at the Hugging Face Model Hub:
-👉 [https://huggingface.co/herrerovir/product-category-classifier-model](https://huggingface.co/herrerovir/product-category-classifier-model)
+👉 **[See the model in Hugging Face Hub](https://huggingface.co/herrerovir/product-category-classifier-model)**
 
 ## 📊 Model Performance
 
@@ -160,36 +178,51 @@ The fine-tuned DistilBERT model achieved strong performance with over 96% accura
 
 You can interact with the product category classifier via a **web interface** using either local deployment or a cloud-hosted app on Hugging Face Spaces.
 
-### Option 1: Run Locally with Streamlit
+### Option 1: Run Locally with Streamlit + FastAPI
 
-If you prefer running the classifier in your own environment with an interactive UI:
+To run the product category classifier locally with an interactive user interface and a modular backend, follow these steps:
 
-1. Clone this repository:
+This setup uses:
+
+- **Streamlit** for the frontend interface
+- **FastAPI** for handling model inference requests (via REST API)
+
+1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/herrerovir/Product-category-classifier
    cd Product-category-classifier
    ```
 
-2. Install the dependencies (if not already done):
+2. **Install all required dependencies:**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Launch the Streamlit app:
+3. **Start the FastAPI backend (in a separate terminal window):**
+
+   ```bash
+   uvicorn backend:app --reload
+   ```
+
+   This will launch the API server at: `http://127.0.0.1:8000`
+
+4. **Launch the Streamlit frontend:**
 
    ```bash
    streamlit run app.py
    ```
 
-4. Open your browser and go to:
+5. **Open the web app:**
+
+   Once the Streamlit app is running, open your browser and go to:
 
    ```
    http://localhost:8501
    ```
 
-This will open a user-friendly web app where you can input product descriptions and get predicted categories with confidence scores.
+You’ll see a user-friendly web interface where you can enter product descriptions. This local deployment keeps the frontend and backend cleanly separated, making it easy to maintain, scale, or containerize for production use.
 
 ### Option 2: Try It on Hugging Face Spaces (No Setup Required)
 
@@ -197,7 +230,7 @@ You can also test the model live in your browser via the Hugging Face Space:
 
 👉 **[Try the Live Demo on Hugging Face Spaces](https://huggingface.co/spaces/herrerovir/product-category-classifier)**
 
-No installation or GPU required — just open the link and start classifying product descriptions instantly.
+No installation or GPU required, just open the link and start classifying product descriptions instantly.
 
 ## 🙌 Acknowledgments
 
